@@ -1,0 +1,18 @@
+.heading{
+  color: blue;
+  font-size: 20px;
+}
+
+.lable-Text {
+  display: inline-block;
+  width: 160px;
+}
+
+.bottom-space{
+  margin-bottom: 6px;
+}
+
+.input-space{
+  width: 180px;
+  height: 16px;
+}
