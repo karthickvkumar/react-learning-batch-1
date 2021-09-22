@@ -5,6 +5,7 @@ import AboutUs from './pages/about-us';
 import Contact from './pages/contact';
 import Product from './pages/product';
 import LoginPage from './pages/login-page';
+import Mail from './pages/mail';
 
 class App extends Component{
 
@@ -17,6 +18,7 @@ class App extends Component{
           <Route path="/about-us" component={AboutUs}></Route>
           <Route path="/contact" component={Contact}></Route>
           <Route path="/product" component={Product}></Route>
+          <Route path="/mail" component={Mail}></Route>
         </Switch>
       </BrowserRouter>
     )

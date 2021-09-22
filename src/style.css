@@ -20,3 +20,56 @@
 .car-img{
   width: 200px;
 }
+
+.main-content{
+  height: 97vh;
+}
+
+.header {
+  height: 10%;
+  border: 3px solid red;
+}
+
+.body {
+  height: 90%;
+  border: 3px solid;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar{
+  border: 3px solid blue;
+    width: 25%;
+}
+
+.content{
+  border: 3px solid;
+  width: 75%;
+}
+
+.pages{
+  border: 3px solid red;
+    height: 90%;
+}
+
+.footer{
+  border: 3px solid green;
+  height: 10%;
+}
+
+.btn{
+  border: 1px solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: block;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+.active-btn{
+  background-color: blue;
+}

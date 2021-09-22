@@ -14,6 +14,8 @@ class Home extends Component{
         <NavLink to="/product">Products</NavLink>
         <br/>
         <NavLink to="/contact">Contact</NavLink>
+        <br/>
+        <NavLink to="/mail">Go to Mail Page</NavLink>
       </div>
     )
   }
