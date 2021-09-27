@@ -11,6 +11,7 @@ class Inbox extends Component{
   }
 
   listUser(){
+
     const url = "https://reqres.in/api/users?page=2";
 
     axios.get(url)
