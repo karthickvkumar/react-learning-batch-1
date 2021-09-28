@@ -22,7 +22,8 @@ class Sent extends Component{
 
     axios.post(url, this.state)
       .then((response) => {
-        console.log(response.data)
+        const serverData = response.data;
+        console.log(serverData);
         alert('User profile created Successfully');
       })
       .catch((error) => {
