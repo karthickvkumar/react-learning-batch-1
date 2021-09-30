@@ -6,6 +6,7 @@ import Contact from './pages/contact';
 import Product from './pages/product';
 import LoginPage from './pages/login-page';
 import Mail from './pages/mail';
+import RegisterPage from './pages/register';
 
 class App extends Component{
 
@@ -19,6 +20,7 @@ class App extends Component{
           <Route path="/contact" component={Contact}></Route>
           <Route path="/product" component={Product}></Route>
           <Route path="/mail" component={Mail}></Route>
+          <Route path="/signin" component={RegisterPage}></Route>
         </Switch>
       </BrowserRouter>
     )
