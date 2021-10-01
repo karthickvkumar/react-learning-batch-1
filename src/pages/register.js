@@ -8,10 +8,13 @@ class RegisterPage extends Component{
       first_name : '',
       last_name : '',
       email_id : '',
+      password : '',
       gender : '',
       date_of_birth : '',
       address : '',
-      city : ''
+      city : '',
+      isVisible : true,
+      showPassword : false
     }
   }
 
@@ -25,11 +28,47 @@ class RegisterPage extends Component{
     console.log(this.state)
   }
 
-  render(){
+  showImage(){
+    this.setState({
+      isVisible : true
+    })
+  }
 
+  hideImage(){
+    this.setState({
+      isVisible : false
+    })
+  }
+
+  showOrHideImage(){
+    this.setState({
+      isVisible : !this.state.isVisible
+    })
+  }
+
+  hideShowPassoword(status){
+    this.setState({
+      showPassword : status
+    })
+  }
+
+  render(){
+    
+    let student_name = "Karthick Kumar !!";
+   
     return(
       <div>
         <h1>Register Page</h1>
+
+        <button onClick={() => this.showImage()}>Show Image</button>
+        <button onClick={() => this.hideImage()}>Hide Image</button>
+
+        <button onClick={() => this.showOrHideImage()}>Show or Hide Image</button>
+
+        { this.state.isVisible && <div>
+          <img src={require("../images/shinchu.jpg").default} className="car-img"/>
+        </div> }
+        
         <div className="bottom-space">
           <label className="lable-Text">Enter First Name :</label>
           <input className="input-space" type="text" placeholder="Please enter your first name.." onChange={this.onHandleInput} name="first_name"/>
@@ -41,6 +80,21 @@ class RegisterPage extends Component{
         <div className="bottom-space">
           <label className="lable-Text">Enter Email ID :</label>
           <input className="input-space" type="text" placeholder="Please enter your email id.." onChange={this.onHandleInput} name="email_id"/>
+        </div>
+        <div className="bottom-space icon-align">
+          <label className="lable-Text">Enter your Password :</label>
+          <input className="input-space" 
+          type={this.state.showPassword ? "text" : "password"} 
+          placeholder="Please enter your password.." onChange={this.onHandleInput} name="password"/>
+          
+          { this.state.showPassword ? 
+            <img src={require("../images/open-eye.png").default} className="icon"
+            onClick={() => this.hideShowPassoword(false)}/> 
+            :
+            <img src={require("../images/close-eye.jpg").default} className="icon"
+            onClick={() => this.hideShowPassoword(true)}/>
+          }
+
         </div>
         <div className="bottom-space">
           <label className="lable-Text">Select your Gender :</label>
@@ -68,6 +122,8 @@ class RegisterPage extends Component{
           </select>
         </div>
         <button className="create-btn" onClick={() => this.onCreateAccount()}>Create Account</button>
+        <h1>The student name is {student_name}</h1>
+        <h1>The student name is {this.state.first_name}</h1>
       </div>
     )
   }

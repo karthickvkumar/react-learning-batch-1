@@ -122,3 +122,14 @@
   padding-right: 15px;
   padding-left: 15px;
 }
+
+.icon{
+  width: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.icon-align{
+  display: flex;
+  flex-direction: row;
+}
